@@ -17,7 +17,7 @@ cd bot_learning_map_project/javascript
 Then follow the instructions in the **README** for the language to complete the setup and startup the app.
 
 ## How to use
-A good way to use this repo is by following the learning map. As you go through the map, you'll find that different sections will reference different commits and code snippets in this repo. As such, following the learning map from start to finish will leave you with an exact replica of the contents of this repo i.e your very on bot.
+A good way to use this repo is by following the learning map. As you go through the map, you'll find that different sections will reference different commits and code snippets in this repo. As such, following the learning map from start to finish will leave you with an exact replica of the contents of this repo i.e your very own bot.
 
 Also you could look through for different sections you might find helpful to what you are working on.
 
