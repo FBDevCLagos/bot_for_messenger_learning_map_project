@@ -1,0 +1,29 @@
+{
+  "name": "bot_learning_map_project",
+  "version": "1.0.0",
+  "description": "This project is the accompanying javascript code implementation for the Messenger bot learning map",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/FBDevCLagos/bot_learning_map_project.git"
+  },
+  "keywords": [
+    "Messenger",
+    "bot",
+    "javascript"
+  ],
+  "author": "Facebook Developer Circle Lagos",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FBDevCLagos/bot_learning_map_project/issues"
+  },
+  "homepage": "https://github.com/FBDevCLagos/bot_learning_map_project#readme",
+  "dependencies": {
+    "body-parser": "^1.18.1",
+    "express": "^4.15.4"
+  }
+}
