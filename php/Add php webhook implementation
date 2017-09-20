@@ -2,7 +2,7 @@
 $hubVerifyToken = '<VERIFY_TOKEN>';
 //replace <VERIFY_TOKEN> here with the verify token you specified on messenger dashboard
 $hub_challenge = $_REQUEST['hub_challenge'];
-/* $access_Token = "The Access Token goes in this variable"; */
+/* $accessToken = "The Access Token goes in this variable"; */
 
 if ($_REQUEST['hub_verify_token'] === $hubVerifyToken){
 	echo $hub_challenge;
