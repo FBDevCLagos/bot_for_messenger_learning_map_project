@@ -1,0 +1,10 @@
+<?php
+//replace <VERIFY_TOKEN> here with the verify token you specified on messenger dashboard
+$hubVerifyToken = '<VERIFY_TOKEN>';
+
+if ($_REQUEST['hub_verify_token'] === $hubVerifyToken){
+    echo $_REQUEST['hub_challenge'];
+} else {
+    echo "Invalid verify token";
+}
+?>
