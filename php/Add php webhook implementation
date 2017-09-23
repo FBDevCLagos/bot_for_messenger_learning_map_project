@@ -1,73 +1,10 @@
 <?php
-$hubVerifyToken = '<VERIFY_TOKEN>';
 //replace <VERIFY_TOKEN> here with the verify token you specified on messenger dashboard
-$hub_challenge = $_REQUEST['hub_challenge'];
-/* $accessToken = "The Access Token goes in this variable"; */
+$hubVerifyToken = '<VERIFY_TOKEN>';
 
 if ($_REQUEST['hub_verify_token'] === $hubVerifyToken){
-	echo $hub_challenge;
-exit; 
+    echo $_REQUEST['hub_challenge'];
+} else {
+    echo "Invalid verify token";
 }
-/* OR we can say:
-if (isset($_REQUEST['hub_mode']) && $_REQUEST['hub_mode'] == 'subscribe'){
-$hub_verify_token = $_REQUEST['hub_verify_token];
-if ($hub_verify_token == $hubVerifyToken) {
-echo $hub_challenge;
-die; 
-}
-}
-*/
-/* global $input;
-$input = json_decode(file_get_contents('php://input'), true);
-
-global $sender_id;
-$sender_id = $input['entry'][0]['messaging'][0]['sender']['id'];
-global $message_text;
-$message_text = $input['entry'][0]['messaging'][0]['message']['text'];
-$message_postback = $input['entry'][0]['messaging'][0]['postback']['payload'];
-$quick_postback = $input['entry'][0]['messaging'][0]['message']['quick_reply']['payload'];
-$message_image = $input['entry'][0]['messaging'][0]['message']['attachments'][0]['payload']['url'];
-$message_type =$input['entry'][0]['messaging'][0]['message']['attachments'][0]['type']; */
-
-
-function curl($input)
- {
-	global $accessToken; 
-	$ch = curl_init();
-	curl_setopt($ch, CURLOPT_URL, 'https://graph.facebook.com/v2.6/me/thread_settings?access_token='.$accessToken);
-	curl_setopt($ch, CURLOPT_POST, true);
-	curl_setopt($ch, CURLOPT_POSTFIELDS, $input);
-	curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json')); 
-	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, true);
-	curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 2);
-	$output = curl_exec($ch);
-	curl_close($ch);
-	error_log($output); 
- } 
- //The above function is for sending curl requests for get started button and persistent menu.
- 
-/* function curl1($response,$encode) {
-	global $accessToken;
-	global $input;
-	$ch = curl_init('https://graph.facebook.com/v2.6/me/messages?access_token='.$accessToken);
-
-    curl_setopt($ch, CURLOPT_POST, 1);
-	   if($encode === 1){
-		curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($response));
-}
-	else{
-       curl_setopt($ch, CURLOPT_POSTFIELDS, $response);
-	}
-    curl_setopt($ch, CURLOPT_HTTPHEADER, ['Content-Type: application/json']);
-   if(!empty($input)){
-   $result = curl_exec($ch);
- }
-   curl_close($ch); 
-	  } 
-curl1($response,1);
-exit;
-*/
-//This other function is for sending curl requests for the reply. 
-
 ?>
